@@ -8,6 +8,10 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(cors()); 
 
+app.get('/', (req, res) => {
+  res.send('Hey this is running 🥳')
+})
+
 app.post('/calculate-difference', (req, res) => {
   const { timestamp1, timestamp2 } = req.body;
 
