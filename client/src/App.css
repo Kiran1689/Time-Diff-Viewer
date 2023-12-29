@@ -1,0 +1,221 @@
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #19191c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.app-container {
+  text-align: center;
+}
+
+
+.content-container {
+  display: flex;
+}
+
+.right-section {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-section {
+  flex: 1;
+  margin: auto;
+}
+
+.main-gif {
+  max-width: 100%;
+  max-height: 100%;
+}
+.logo {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto; 
+  max-width: 100%; 
+  margin-bottom: 10px; 
+}
+
+.title {
+  width: auto;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 34px;
+  color: #ffffff;
+  font-family: "Papyrus", Fantasy;
+  
+}
+
+.input {
+ border: 2px solid #e8e8e8;
+ padding: 15px;
+ border-radius: 10px;
+ background-color: #ffffff;
+ font-size: small;
+ font-weight: bold;
+ text-align: center;
+ margin: 5px 10px 15px 10px;
+ width: calc(100% - 30px);
+ box-sizing: border-box;
+}
+
+.input:focus {
+ outline-color: white;
+ background-color: #212121;
+ color: #e8e8e8;
+ box-shadow: 5px 5px #888888;
+}
+
+.button {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  background-color: rgb(161, 255, 20);
+  border-radius: 30px;
+  color: rgb(19, 19, 19);
+  font-weight: 600;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: .2s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+  transition-duration: .5s;
+  margin: auto;
+}
+
+.svgIcon {
+  height: 25px;
+  transition-duration: 1.5s;
+}
+
+.bell path {
+  fill: rgb(19, 19, 19);
+}
+
+.button:hover {
+  background-color: rgb(192, 255, 20);
+  transition-duration: .5s;
+}
+
+.button:active {
+  transform: scale(0.97);
+  transition-duration: .2s;
+}
+
+.button:hover .svgIcon {
+  transform: rotate(250deg);
+  transition-duration: 1.5s;
+}
+
+
+
+.error {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.result {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.card {
+  width: 350px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px 15px 25px 15px;
+  background-color: red;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  font-weight: 900;
+  transition-duration: .2s;
+  background: linear-gradient(0deg, #000, #272727);
+  
+}
+
+.card:before, .card:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  border-radius: 10px;
+  
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.card:after {
+  filter: blur(100px);
+}
+
+@media (max-width: 720px) {
+  .title {
+    margin-top: 5px;
+    font-size: 18px; 
+  }
+
+  .card {
+    width: 70%; 
+    margin: 0 auto 5px;
+    
+  }
+  
+}
+
+.footer {
+  text-align: center;
+  color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+@media screen and (max-width: 720px) {
+  .content-container {
+    flex-direction: column;
+  }
+
+  .main-gif {
+    max-width: 100%;
+    max-height: 90%;
+  }
+
+  .right-section {
+    padding-top: 0;
+    padding-bottom: 0;
+    
+  }
+}
